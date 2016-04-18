@@ -1,0 +1,15 @@
+---
+layout: layout
+title: Jekyll
+slug: blog
+permalink: /blog/
+---
+{% for post in site.posts %}
+{% if post.type == 'blog' %}
+<div class="column-12 blog-post  animated fadeInUp">
+	<h1><a href="{{ post.url}}" title="{{ post.title }}">{{ post.title }}</a></h1>
+	{{ post.summary | markdownify }}
+	<p class="read-arrow"><a href="{{ post.url }}">Learn more. &rarr;</a></p>
+</div>
+{% endif %}
+{% endfor %}
