@@ -1,5 +1,3 @@
-var scene = document.getElementById('scene');
-    var parallax = new Parallax(scene);
 //	HISTORICIZE AND AJAXIFY OUR SITE
 jQuery(document).ready(function() {
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
