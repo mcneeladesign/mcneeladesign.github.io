@@ -47,16 +47,6 @@ jQuery(document).ready(function() {
 				$('#myform').find('.alert--loading').hide();
 				$('#myform').append('<div class="alert alert--error">Ops, there was an error.</div>');
 			}
-
-			// beforeSend: function() {
-			// 	console.log('sending...');
-			// },
-			// success: function(data) {
-			// 	console.log(data);
-			// },
-			// error: function(err) {
-			// 	console.log(err);
-			// }
 		});
 	}
 
