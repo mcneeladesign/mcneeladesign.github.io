@@ -1,5 +1,14 @@
+
 //	HISTORICIZE AND AJAXIFY OUR SITE
 jQuery(document).ready(function() {
+	var doParallax = $(document).find('.scene');
+	console.log(doParallax);
+
+	if (doParallax) {
+		var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
+	}
+
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
 
 	//	Catch all internally-focused links and push a new state.
