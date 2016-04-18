@@ -1,11 +1,10 @@
 
 //	HISTORICIZE AND AJAXIFY OUR SITE
 jQuery(document).ready(function() {
-	var doParallax = $(document).find('.scene');
-	console.log(doParallax);
 
-	if (doParallax) {
-		var scene = document.getElementById('scene');
+
+	if ($(".scene")[0]){
+	    var scene = document.getElementById('scene');
 var parallax = new Parallax(scene);
 	}
 
