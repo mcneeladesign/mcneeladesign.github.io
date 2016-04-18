@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Jekyll</title>
+  <title>MCNEELA DESIGN - Contact us</title>
   <meta name="description" content="This is a Jekyll test for mcneela86.com hoted on GitHub Pages
 ">
 
@@ -31,19 +31,30 @@
 		<div class="container">
 			<header class="row">
 	<ul>
-		<li>
-			<a href="/">home</a>
-			<a href="/services">services</a>
-			<a href="/blog">blog</a>
-			<a href="/portfolio">portfolio</a>
-			<a href="/contact">contact</a>
-		</li>
+		<li><a href="/">home</a></li>
+		<!-- <li><a href="/services">services</a></li> -->
+		<!-- <li><a href="/blog">blog</a></li> -->
+		<!-- <li><a href="/portfolio">portfolio</a></li> -->
+		<li><a href="/contact">contact</a></li>
 	</ul>
 </header>
 
 			<section class="content row">
-			<div class="column-12 page animated fadeInUp">
-	<h1>Contact</h1>
+			<div class="column-12 page animated fadeInUp contact">
+	
+	<h1 class="page-heading">Contact us</h1>
+
+	<form action="https://formspree.io/martin@mcneeladesign.com" method="POST">
+		<input type="text" name="name" placeholder="Name">
+		<input type="email" name="_replyto" placeholder="Email">
+		<textarea name="info" placeholder="Say something..."></textarea>
+		<!-- Hidden fields -->
+		<input type="hidden" name="_next" value="http://jekyll.mcneela86.com/confirmation" />
+		<input type="hidden" name="_subject" value="New submission!" />
+		<input type="text" name="_gotcha" style="display:none" />
+		<input type="submit" value="Send">
+	</form>
+
 </div>
 			</section>
 
