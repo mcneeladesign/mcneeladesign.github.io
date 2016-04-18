@@ -56,3 +56,56 @@ nav {
 	background: url('../images/bg.png');
 	background-size: cover;
 }
+
+.scene {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.layer-one {
+    margin-top: 19vh;
+    margin-left: 51vw;
+}
+
+.layer-two {
+    margin-top: 70vh;
+    margin-left: 35vw;
+}
+
+.layer-three {
+    margin-top: 35vh;
+    margin-left: 15vw;
+}
+
+.layer-four {
+    margin-top: 75vh;
+    margin-left: 10vw;
+}
+
+// @media only screen and (max-width: 768px) {
+// 	.layer-one {
+// 	    margin-top: 28vh;
+// 	    margin-left: 60vw;
+// 	}
+
+// 	.layer-two {
+// 	    margin-top: 70vh;
+// 	    margin-left: 35vw;
+// 	}
+
+// 	.layer-three {
+// 	    margin-top: 35vh;
+// 	    margin-left: 15vw;
+// 	}
+
+// 	.layer-four {
+// 	    margin-top: 75vh;
+// 	    margin-left: 0vw;
+// 	}
+// }

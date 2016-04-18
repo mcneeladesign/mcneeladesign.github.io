@@ -1,3 +1,5 @@
+var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 //	HISTORICIZE AND AJAXIFY OUR SITE
 jQuery(document).ready(function() {
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
@@ -22,12 +24,15 @@ jQuery(document).ready(function() {
 		});
 	});
 
+
+	
+
+
 	// Form submission
 	$('#myform').submit(function(event) {
 		event.preventDefault();
 		submitdata();
 	});
-
 	function submitdata() {
 		var url = 'http' + '://' + 'formspree' + '.io/' + 'martin' + '@' + 'mcneeladesign' + '.' + 'com'
 		console.log(url);
@@ -52,8 +57,3 @@ jQuery(document).ready(function() {
 
 
 });
-
-
-// Formspree submission
-// var contactform =  document.getElementById('contactform');
-// contactform.setAttribute('action', '//formspree.io/' + 'martin' + '@' + 'mcneeladesign' + '.' + 'com');
