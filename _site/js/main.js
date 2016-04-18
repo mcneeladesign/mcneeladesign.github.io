@@ -44,22 +44,28 @@ jQuery(document).ready(function() {
 	// 		}
 	// 	});
 	// });
-
-	$.ajax({
-	  url: 'http://formspree.io/martin@mcneeladesign.com',
-	  method: 'POST',
-	  data: $('#myform').serialize(),
-	  dataType: 'json',
-	  beforeSend: function() {
-	  	console.log('sending...');
-	  },
-	  success: function(data) {
-	  	console.log(data);
-	  },
-	  error: function(err) {
-	  	console.log(err);
-	  }
+	$('#myform').submit(function(event) {
+		event.preventDefault();
+		/* Act on the event */
+		submitdata();
 	});
+	// function submitdata() {
+	// 	$.ajax({
+	// 	  url: 'http://formspree.io/martin@mcneeladesign.com',
+	// 	  method: 'POST',
+	// 	  data: $('#myform').serialize(),
+	// 	  dataType: 'json',
+	// 	  beforeSend: function() {
+	// 	  	console.log('sending...');
+	// 	  },
+	// 	  success: function(data) {
+	// 	  	console.log(data);
+	// 	  },
+	// 	  error: function(err) {
+	// 	  	console.log(err);
+	// 	  }
+	// 	});
+	// }
 
 
 });
