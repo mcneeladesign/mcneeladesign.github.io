@@ -22,3 +22,8 @@ jQuery(document).ready(function() {
 		});
 	});
 });
+
+
+// Formspree submission
+var contactform =  document.getElementById('contactform');
+contactform.setAttribute('action', '//formspree.io/' + 'martin' + '@' + 'mcneeladesign' + '.' + 'com');
