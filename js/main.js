@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
 		var url = 'http' + '://' + 'formspree' + '.io/' + 'martin' + '@' + 'mcneeladesign' + '.' + 'com'
 		console.log(url);
 		$.ajax({
-			url: url,
+			url: 'http://formspree.io/martin@mcneeladesign.com',
 			method: 'POST',
 			data: $('#myform').serialize(),
 			dataType: 'json',
