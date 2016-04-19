@@ -1,11 +1,11 @@
-
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
 //	HISTORICIZE AND AJAXIFY OUR SITE
 jQuery(document).ready(function() {
 
 
 	if ($(".scene")[0]){
-	    var scene = document.getElementById('scene');
-var parallax = new Parallax(scene);
+	    
 	}
 
 	var siteUrl = 'http://'+(document.location.hostname||document.location.host);
