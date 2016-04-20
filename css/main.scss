@@ -174,6 +174,13 @@ body {
     clear: both;
 }
 
+@media only screen and (max-width: 768px) {
+.contact .title h1 {
+    font-size: 9vw;
+    clear: both;
+}
+}
+
 .contact .title span {
     background: #fff;
     float: left;
@@ -182,6 +189,29 @@ body {
     padding: 3px 10px;
     font-size: 1.5vw;
     clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+.contact .title span {
+    background: #fff;
+    float: left;
+    margin: 0;
+    color: #4c4c4c;
+    padding: 3px 10px;
+    font-size: 3.5vw;
+    clear: both;
+}
+}
+
+.contact .title {
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+.contact .title {
+    margin-top: 15vw;
+    margin-bottom: 10vw;
+}
 }
 
 .contact form input, .contact form textarea {
@@ -204,11 +234,18 @@ body {
     background-size: 1%;
 }
 
+.contact form textarea[required] {
+    background-position: 99% 5%;
+}
+
 .contact form [required]:valid {
     background-image: url(../images/input-valid.svg);
-    background-repeat: no-repeat;
-    background-position: 99% 15%;
-    background-size: 1%;
+}
+
+@media only screen and (max-width: 768px) {
+.contact form [required] {
+    background-size: 2%;
+}
 }
 
 .contact form input[type=submit] {
@@ -226,4 +263,37 @@ body {
 .contact form input[type=submit]:hover {
     background-color: #fff;
     color: #57BFDD;
+}
+
+@media only screen and (max-width: 768px) {
+.contact form input[type=submit] {
+    font-size: 5vw;
+    padding: .2vw 5vw;
+    width: 100%;
+}
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    font-size: 1.3vw;
+    padding: .6vw;
+    margin: 1vw 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+.contact form input, .contact form textarea {
+    font-size: 3.5vw;
+    padding: 1.5vw;
+    margin: 3vw 0;
+    border: none;
+    box-sizing: border-box;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.contact {
+    margin: 0 5vw 5vw;
+}
 }
