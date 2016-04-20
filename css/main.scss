@@ -31,10 +31,35 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "base";
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
-html, body, .content, .content > div {
+html, body, .content {
 	min-height: 100vh;
 	margin: 0;
+}
+
+.container {
+	z-index: 1;
+}
+
+.content {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed",arial,sans-serif;
+    margin: 0;
+    line-height: 100%;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+a, input, label, li, p, span, textarea {
+    font-family: 'Roboto Slab',serif;
+    color: #4c4c4c;
 }
 
 nav {
@@ -52,10 +77,14 @@ nav {
 	}
 }
 
-.home {
+body {
 	background: url('../images/bg.png');
 	background-size: cover;
 }
+// .home, .contact {
+// 	background: url('../images/bg.png');
+// 	background-size: cover;
+// }
 
 .scene {
     padding: 0;
@@ -63,7 +92,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
     height: 100vh;
 }
@@ -109,3 +138,92 @@ nav {
 // 	    margin-left: 0vw;
 // 	}
 // }
+
+
+
+.home {
+    text-align: center;
+    z-index: 1;
+    border: 3px solid #fff;
+    padding: 3%;
+    margin: 5% 25%;
+
+    h1 {
+    	font-size: 5.5vw;
+	}
+	.home .main p {
+	    font-size: 1.5vw;
+	    margin: 0;
+	}
+
+}
+
+
+// CONTECT FORM
+.contact form {
+    flex: 1;
+    z-index: 1;
+}
+
+.contact .title h1 {
+    background: #fff;
+    color: #57BFDD;
+    float: left;
+    padding: 3px 10px;
+    font-size: 4.5vw;
+    clear: both;
+}
+
+.contact .title span {
+    background: #fff;
+    float: left;
+    margin: 0;
+    color: #4c4c4c;
+    padding: 3px 10px;
+    font-size: 1.5vw;
+    clear: both;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    font-size: 1.3vw;
+    padding: .6vw;
+    margin: 1vw 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.contact form input {
+    line-height: 200%;
+}
+
+.contact form [required] {
+    background-image: url(../images/required.svg);
+    background-repeat: no-repeat;
+    background-position: 99% 15%;
+    background-size: 1%;
+}
+
+.contact form [required]:valid {
+    background-image: url(../images/input-valid.svg);
+    background-repeat: no-repeat;
+    background-position: 99% 15%;
+    background-size: 1%;
+}
+
+.contact form input[type=submit] {
+    background-color: transparent;
+    font-size: 2vw;
+    border: 2px solid #fff;
+    font-family: "Roboto Condensed",arial,sans-serif;
+    color: #fff;
+    padding: .2vw 5vw;
+    width: auto;
+    text-transform: uppercase;
+    float: right;
+}
+
+.contact form input[type=submit]:hover {
+    background-color: #fff;
+    color: #57BFDD;
+}
