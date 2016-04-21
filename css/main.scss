@@ -88,7 +88,7 @@ nav {
 	    text-transform: uppercase;
 	    margin-left: 1vh;
 	    margin-right: 1vh;
-	    font-size: 2.5vh;
+	    font-size: 2vw;
 
 	    &:visited, :active {
 	 	   color: #ffffff;
@@ -97,8 +97,8 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-	.nav ul li a { 
-		
+	nav ul li a { 
+	    font-size: 5vw;
 	}
 }
 
@@ -144,27 +144,27 @@ body {
     margin-left: 10vw;
 }
 
-// @media only screen and (max-width: 768px) {
-// 	.layer-one {
-// 	    margin-top: 28vh;
-// 	    margin-left: 60vw;
-// 	}
+@media only screen and (max-width: 768px) {
+	.layer-one {
+	    margin-top: 12vh;
+	    margin-left: 60vw;
+	}
 
-// 	.layer-two {
-// 	    margin-top: 70vh;
-// 	    margin-left: 35vw;
-// 	}
+	.layer-two {
+	    margin-top: 70vh;
+	    margin-left: 35vw;
+	}
 
-// 	.layer-three {
-// 	    margin-top: 35vh;
-// 	    margin-left: 15vw;
-// 	}
+	.layer-three {
+	    margin-top: 35vh;
+	    margin-left: 15vw;
+	}
 
-// 	.layer-four {
-// 	    margin-top: 75vh;
-// 	    margin-left: 0vw;
-// 	}
-// }
+	.layer-four {
+	    margin-top: 75vh;
+	    margin-left: 0vw;
+	}
+}
 
 
 
@@ -187,6 +187,12 @@ body {
 
 
 // CONTECT FORM
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25vw 5vw;
+}
+
 .contact form {
     flex: 1;
     z-index: 1;
