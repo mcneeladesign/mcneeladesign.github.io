@@ -272,7 +272,7 @@ body {
 }
 
 .contact form [required]:valid {
-    background-image: url(../images/input-valid.svg);
+    background-image: url(../images/input-valid.svg) !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -329,4 +329,30 @@ body {
 .contact {
     margin: 0 5vw 5vw;
 }
+}
+
+@media only screen and (max-width: 500px) {
+.home {
+    margin: 0 5vw 5vw;
+}
+}
+
+.alert {
+    background: #ffffff;
+    border: 1px solid #57BFDD;
+    font-family: "Roboto Slab";
+    color: #57BFDD;
+    padding: 2%;
+}
+
+.alert--success {
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    background: #dff0d8;
+}
+
+.alert--error {
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    background: #f2dede;
 }

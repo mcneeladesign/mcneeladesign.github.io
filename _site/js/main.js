@@ -48,15 +48,15 @@ jQuery(document).ready(function() {
 			data: $('#myform').serialize(),
 			dataType: 'json',
 			beforeSend: function() {
-				$('#myform').append('<div class="alert alert--loading">Sending message…</div>');
+				$('.submit').before('<div class="alert alert--loading">Sending message…</div>');
 			},
 			success: function(data) {
 				$('#myform').find('.alert--loading').hide();
-				$('#myform').append('<div class="alert alert--success">Message sent!</div>');
+				$('.submit').before('<div class="alert alert--success">Message sent!</div>');
 			},
 			error: function(err) {
 				$('#myform').find('.alert--loading').hide();
-				$('#myform').append('<div class="alert alert--error">Ops, there was an error.</div>');
+				$('.submit').before('<div class="alert alert--error">Ops, there was an error.</div>');
 			}
 		});
 	}
