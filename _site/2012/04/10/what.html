@@ -11,8 +11,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MCNEELA DESIGN - What is This Monstrosity? - Portfolio post</title>
-  <meta name="description" content="Jekyll, despite being a static site generator, is very HTML5 History- and AJAX-friendly. The key lies in History.JS, built by Benjamin Arthur Lupton, and a s...">
+  <title>MCNEELA DESIGN - Miller & Green</title>
+  <meta name="description" content="This site is the online presence of Miller &amp; Green hairdressing in North Sydney. This is a wonderful little business with a very high standard in everyth...">
 
   <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/main.css">
@@ -89,75 +89,17 @@
 </div> -->
 
 			<section class="content row">
-			<div class="column-12 post animated fadeInUp">
-	<h1><a href="/2012/04/10/what.html" title="What is This Monstrosity? - Portfolio post">What is This Monstrosity? - Portfolio post</a></h1>
-	<p>Jekyll, despite being a static site generator, is very HTML5 History- and AJAX-friendly. The key lies in <a href="https://github.com/balupton/history.js">History.JS</a>, built by Benjamin Arthur Lupton, and a small piece of Javascript.</p>
+			<div class="column-12 portfolio-post animated fadeInUp">
+	<h1><a href="/2012/04/10/what.html" title="Miller & Green">Miller & Green</a></h1>
+	<p><img src="/images/portfolio/millerandgreen/minimalMacbook.png" alt="My helpful screenshot" /></p>
 
-<h2 id="what-this-does">What this does</h2>
+<p>This site is the online presence of Miller &amp; Green hairdressing in North Sydney. This is a wonderful little business with a very high standard in everything they do.</p>
 
-<p>By utilizing History.JS, we can make any Jekyll-built site use AJAX and a bit of jQuery magic to load content <em>without</em> refreshing the page, and <em>with</em> all the cleanliness of the HTML5 pushState functionality.</p>
+<p>Due to the high standard of the client I am happy I was able to please them and meet the standard they set.</p>
 
-<h2 id="how-it-works">How it works</h2>
+<p>This project was completed solely by me, from consultation through to deployment and updates.</p>
 
-<p>Jekyll, as you are probably aware, is a staic site generator. This seems to be the antithesis of the complex, AJAX-driven websites that we use on a day-to-day basis. There’s <strong>no database</strong>, <strong>no server-side scripting</strong>, and <strong>it works everywhere</strong>. I find a great deal of beauty in that simplicity, but I didn’t want to lose any functionality that I could get with something driven by PHP or Ruby on the server.</p>
-
-<p>At its core, this HTML5 History-friendly version of Jekyll catches any internal links and fetches the full page. From there, it searches for the post’s content (via a certain selector) and injects that into the DOM. History.JS takes care of changing the URL in the browser’s address bar, and allowing for full forward-and-back button functionality. This ensures that deep-linking works exactly like it should, too.</p>
-
-<p><em>That’s sweet.</em></p>
-
-<p>The tech that makes this possible is acutally incredibly simple. All one needs to do is use History.JS and include this piece of code into their primary Javascript file.</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
-
-	<span class="kd">var</span> <span class="nx">siteUrl</span> <span class="o">=</span> <span class="s1">'http://'</span><span class="o">+</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hostname</span><span class="o">||</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span>
-
-	<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">delegate</span><span class="p">(</span><span class="s1">'a[href^="/"],a[href^="'</span><span class="o">+</span><span class="nx">siteUrl</span><span class="o">+</span><span class="s1">'"]'</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-		<span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-		<span class="nx">History</span><span class="p">.</span><span class="nx">pushState</span><span class="p">({},</span> <span class="s2">""</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">pathname</span><span class="p">);</span>
-	<span class="p">});</span>
-
-	<span class="nx">History</span><span class="p">.</span><span class="nx">Adapter</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s1">'statechange'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-		<span class="kd">var</span> <span class="nx">State</span> <span class="o">=</span> <span class="nx">History</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
-		<span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">State</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
-			<span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).(</span><span class="s2">"title"</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
-			<span class="nx">$</span><span class="p">(</span><span class="s1">'.content'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.content'</span><span class="p">));</span>
-			<span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">'_trackPageview'</span><span class="p">,</span> <span class="nx">State</span><span class="p">.</span><span class="nx">url</span><span class="p">]);</span>
-		<span class="p">});</span>
-	<span class="p">});</span>
-
-<span class="p">});</span></code></pre></figure>
-
-<p>Really, though, it’s a little more complicated than that. The best way to get functionality out-of-the-box is to clone this repo out of Github and use it as a starting point for your own creation. You can change the formatting, the types of layouts — whatever you want. You can strip away my <a href="https://github.com/joelhans/Colonnade"><em>wonderful</em> grid</a>, and you can free yourself from my CSS. <strong>The only caveat is that you must maintain a similar structure in your layout.html file. Or know what you’re doing.</strong></p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
-	{{ content }}
-<span class="nt">&lt;/section&gt;</span></code></pre></figure>
-
-<p>If you get rid of that “content” class, the AJAX call in the above snippet will fail to load the requested page, and that’s no good at all. Of course, you can change that class <em>and</em> change the class name the Javascript function looks for.</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="s1">'.content'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'.YOUR CLASS NAME'</span><span class="p">));</span></code></pre></figure>
-
-<p>There. That wasn’t that hard, was it?</p>
-
-<h3 id="titles">Titles</h3>
-
-<p>As a little aside, I’ll take a minute to talk titles. The above code is capable of changing the document’s title on-the-fly during an AJAX call, thanks to this little bit of code:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">data</span><span class="p">).(</span><span class="s2">"title"</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span></code></pre></figure>
-
-<p>This works in essentially the same way as the Javascript that pulls the page’s content, except it grabs the title of the page we call with AJAX and inserts that into the current document. It assumes that you have your titles set up properly, which this default Jekyll site does. <em>Just another reason to use this as a solid template for your next Jekyll-based project</em>.</p>
-
-<h3 id="google-analytics">Google Analytics</h3>
-
-<p>Be not afraid! The piece of JavaScript that powers the AJAX-iness of this Jekyll template is also capable of handling the changes via a <code class="highlighter-rouge">_gaq.push</code> function. This assumes that you have the proper Google Analytics code (with your own account #) set up in the header of the <code class="highlighter-rouge">layout.html</code> page, which can be found in <code class="highlighter-rouge">_layouts/</code>. The code is simple:</p>
-
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">_gaq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">'_trackPageview'</span><span class="p">,</span> <span class="nx">State</span><span class="p">.</span><span class="nx">url</span><span class="p">]);</span></code></pre></figure>
-
-<h2 id="why">Why</h2>
-
-<p>Oftentimes, HTML5 History and AJAX seem like “overkill” for the kinds of sites that Jekyll is usually responsible for. Let’s be honest — we’re not making the next Gmail with Jekyll. We’re not even making a web app. That doesn’t mean there aren’t good use cases for something like this. I built it for a website for a musician &amp;dash; I didn’t want visitors to have to choose between playing a sample track and being able to browse the site without interrupting their listening. This seems to work pretty darn well.</p>
-
-<p><strong>Thanks for looking!</strong> I want to see what you can come up with. Get in touch at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#105;&#064;&#100;&#101;&#115;&#105;&#103;&#110;&#098;&#121;&#106;&#111;&#101;&#108;&#046;&#099;&#111;&#109;">&#104;&#105;&#064;&#100;&#101;&#115;&#105;&#103;&#110;&#098;&#121;&#106;&#111;&#101;&#108;&#046;&#099;&#111;&#109;</a>. Remember: <em>This is actually really easy.</em></p>
+<p>The main focus of the client was to have a professional looking online presence and bring more business through the doors.</p>
 
 	<p class="back-arrow"><a href="/">&larr; Back</a></p>
 </div>

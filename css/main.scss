@@ -187,172 +187,183 @@ body {
 
 
 // CONTECT FORM
-.contact {
-    display: flex;
-    flex-direction: column;
-    margin: 0 25vw 5vw;
-}
+	.contact {
+	    display: flex;
+	    flex-direction: column;
+	    margin: 0 25vw 5vw;
+	}
 
-.contact form {
-    flex: 1;
-    z-index: 1;
-}
+	.contact form {
+	    flex: 1;
+	    z-index: 1;
+	}
 
-.contact .title h1 {
-    background: #fff;
-    color: #57BFDD;
-    float: left;
-    padding: 3px 10px;
-    font-size: 4.5vw;
-    clear: both;
-}
+	.contact .title h1 {
+	    background: #fff;
+	    color: #57BFDD;
+	    float: left;
+	    padding: 3px 10px;
+	    font-size: 4.5vw;
+	    clear: both;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact .title h1 {
-    font-size: 9vw;
-    clear: both;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact .title h1 {
+	    font-size: 9vw;
+	    clear: both;
+	}
+	}
 
-.contact .title span {
-    background: #fff;
-    float: left;
-    margin: 0;
-    color: #4c4c4c;
-    padding: 3px 10px;
-    font-size: 1.5vw;
-    clear: both;
-}
+	.contact .title span {
+	    background: #fff;
+	    float: left;
+	    margin: 0;
+	    color: #4c4c4c;
+	    padding: 3px 10px;
+	    font-size: 1.5vw;
+	    clear: both;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact .title span {
-    background: #fff;
-    float: left;
-    margin: 0;
-    color: #4c4c4c;
-    padding: 3px 10px;
-    font-size: 3.5vw;
-    clear: both;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact .title span {
+	    background: #fff;
+	    float: left;
+	    margin: 0;
+	    color: #4c4c4c;
+	    padding: 3px 10px;
+	    font-size: 3.5vw;
+	    clear: both;
+	}
+	}
 
-.contact .title {
-	overflow: hidden;
-}
+	.contact .title {
+		overflow: hidden;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact .title {
-    margin-top: 15vw;
-    margin-bottom: 10vw;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact .title {
+	    margin-top: 15vw;
+	    margin-bottom: 10vw;
+	}
+	}
 
-.contact form input, .contact form textarea {
-    width: 100%;
-    font-size: 1.3vw;
-    padding: .6vw;
-    margin: 1vw 0;
-    border: none;
-    box-sizing: border-box;
-}
+	.contact form input, .contact form textarea {
+	    width: 100%;
+	    font-size: 1.3vw;
+	    padding: .6vw;
+	    margin: 1vw 0;
+	    border: none;
+	    box-sizing: border-box;
+	}
 
-.contact form input {
-    line-height: 200%;
-}
+	.contact form input {
+	    line-height: 200%;
+	}
 
-.contact form [required] {
-    background-image: url(../images/required.svg);
-    background-repeat: no-repeat;
-    background-position: 99% 15%;
-    background-size: 1%;
-}
+	.contact form [required] {
+	    background-image: url(../images/required.svg);
+	    background-repeat: no-repeat;
+	    background-position: 99% 15%;
+	    background-size: 1%;
+	}
 
-.contact form textarea[required] {
-    background-position: 99% 5%;
-}
+	.contact form textarea[required] {
+	    background-position: 99% 5%;
+	}
 
-.contact form [required]:valid {
-    background-image: url(../images/input-valid.svg) !important;
-}
+	.contact form [required]:valid {
+	    background-image: url(../images/input-valid.svg) !important;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact form [required] {
-    background-size: 2%;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact form [required] {
+	    background-size: 2%;
+	}
+	}
 
-.contact form input[type=submit] {
-    background-color: transparent;
-    font-size: 2vw;
-    border: 2px solid #fff;
-    font-family: "Roboto Condensed",arial,sans-serif;
-    color: #fff;
-    padding: .2vw 5vw;
-    width: auto;
-    text-transform: uppercase;
-    float: right;
-}
+	.contact form input[type=submit] {
+	    background-color: transparent;
+	    font-size: 2vw;
+	    border: 2px solid #fff;
+	    font-family: "Roboto Condensed",arial,sans-serif;
+	    color: #fff;
+	    padding: .2vw 5vw;
+	    width: auto;
+	    text-transform: uppercase;
+	    float: right;
+	}
 
-.contact form input[type=submit]:hover {
-    background-color: #fff;
-    color: #57BFDD;
-}
+	.contact form input[type=submit]:hover {
+	    background-color: #fff;
+	    color: #57BFDD;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact form input[type=submit] {
-    font-size: 5vw;
-    padding: .2vw 5vw;
-    width: 100%;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact form input[type=submit] {
+	    font-size: 5vw;
+	    padding: .2vw 5vw;
+	    width: 100%;
+	}
+	}
 
-.contact form input, .contact form textarea {
-    width: 100%;
-    font-size: 1.3vw;
-    padding: .6vw;
-    margin: 1vw 0;
-    border: none;
-    box-sizing: border-box;
-}
+	.contact form input, .contact form textarea {
+	    width: 100%;
+	    font-size: 1.3vw;
+	    padding: .6vw;
+	    margin: 1vw 0;
+	    border: none;
+	    box-sizing: border-box;
+	}
 
-@media only screen and (max-width: 768px) {
-.contact form input, .contact form textarea {
-    font-size: 3.5vw;
-    padding: 1.5vw;
-    margin: 3vw 0;
-    border: none;
-    box-sizing: border-box;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact form input, .contact form textarea {
+	    font-size: 3.5vw;
+	    padding: 1.5vw;
+	    margin: 3vw 0;
+	    border: none;
+	    box-sizing: border-box;
+	}
+	}
 
-@media only screen and (max-width: 768px) {
-.contact {
-    margin: 0 5vw 5vw;
-}
-}
+	@media only screen and (max-width: 768px) {
+	.contact {
+	    margin: 0 5vw 5vw;
+	}
+	}
 
-@media only screen and (max-width: 500px) {
-.home {
-    margin: 0 5vw 5vw;
-}
-}
+	@media only screen and (max-width: 500px) {
+	.home {
+	    margin: 0 5vw 5vw;
+	}
+	}
 
-.alert {
-    background: #ffffff;
-    border: 1px solid #57BFDD;
-    font-family: "Roboto Slab";
-    color: #57BFDD;
-    padding: 2%;
-}
+	.alert {
+	    background: #ffffff;
+	    border: 1px solid #57BFDD;
+	    font-family: "Roboto Slab";
+	    color: #57BFDD;
+	    padding: 2%;
+	}
 
-.alert--success {
-    border: 1px solid #d6e9c6;
-    color: #3c763d;
-    background: #dff0d8;
-}
+	.alert--success {
+	    border: 1px solid #d6e9c6;
+	    color: #3c763d;
+	    background: #dff0d8;
+	}
 
-.alert--error {
-    border: 1px solid #ebccd1;
-    color: #a94442;
-    background: #f2dede;
-}
+	.alert--error {
+	    border: 1px solid #ebccd1;
+	    color: #a94442;
+	    background: #f2dede;
+	}
+
+
+
+
+
+
+// Portfolio
+	.portfolio-post {
+		margin-top: 10vh;
+		background: #fff;
+	}
