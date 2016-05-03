@@ -45,8 +45,31 @@ html, body, .content {
 
 .content {
 	display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio-post {
+	width: 100%;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.content {
+		display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: center;
+	    flex-wrap: wrap;
+	}
+	.portfolio-post {
+		width: 33%;
+	}
+	.portfolio-post-single {
+		width: 100%;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,9 +86,9 @@ a, input, label, li, p, span, textarea {
 }
 
 nav {
-	position: absolute;
-	top: 1vh;
-	right: 1vw;
+	// position: absolute;
+	// top: 1vh;
+	// right: 1vw;
 	// width: 50px;
 	// height: 50px;
 	// border: 1px solid red;
@@ -89,6 +112,7 @@ nav {
 	    margin-left: 1vh;
 	    margin-right: 1vh;
 	    font-size: 2vw;
+	    // display: block;
 
 	    &:visited, :active {
 	 	   color: #ffffff;
@@ -366,4 +390,155 @@ body {
 	.portfolio-post {
 		margin-top: 10vh;
 		background: #fff;
+	}
+
+
+
+
+// Navigation
+	.menu-control {
+		width: 50px;
+		height: 50px;
+	    position: absolute;
+    	top: 0;
+    	right: 0;
+    	z-index: 10;
+		transition: all 300ms;
+	}
+
+	.nav-icon > div {
+		background: #5a5a5a;
+		width: 30px;
+		height: 2px;
+		margin: 0 auto;
+		transition: all 300ms ease-out 1s;
+	}
+
+	.active .nav-icon > div {
+		transition: all 300ms ease-out;
+	}
+
+	.menu-control .nav-icon-item-one {
+		transform: translate3d(0, 15px, 0);
+	}
+	.menu-control .nav-icon-item-two {
+		transform: translate3d(0, 22px, 0);
+	}
+	.menu-control .nav-icon-item-three {
+		transform: translate3d(0, 29px, 0);
+	}
+
+	.active .menu-control .nav-icon-item-one {
+		transform: rotate(45deg) translate3d(18px, 17px, 0);
+	}
+	.active .menu-control .nav-icon-item-two {
+		transform: translateX(200px);
+	}
+	.active .menu-control .nav-icon-item-three {
+		transform: rotate(-45deg) translate3d(-15px, 15px, 0);
+	}
+
+	.menu-overlay {
+		background: #fff;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 1vh;
+		right: 1vh;
+		z-index: 5;
+		transition: all 300ms 1000ms;
+	}
+
+	.menu-overlay.active {
+		transform: translate3d(1vh, -1vh, 0);
+		width: 100vw;
+		height: 100vh;
+		transition: all 300ms;
+	}
+
+	.site-nav li {
+		// display: none;
+	    margin: 0 auto;
+    	width: 80%;
+    	opacity: 0;
+    	overflow: hidden;
+    	display: block;
+		transform: translate3d(0, 20px, 0);
+    	transition: all 500ms ease-in-out;
+    	// transition: all 500ms ease-in-out 1s;
+	}
+
+	// .active .site-nav li {
+    	// transition: all 500ms ease-in-out;
+	// }
+
+	.site-nav li:nth-child(1) {
+    	transition: all 500ms ease-in-out 500ms;
+	}
+
+	.site-nav li:nth-child(2) {
+		opacity: 0;
+    	transition: all 500ms ease-in-out 400ms;
+	}
+
+	.site-nav li:nth-child(3) {
+		opacity: 0;
+    	transition: all 500ms ease-in-out 300ms;
+	}
+
+	.site-nav li:nth-child(4) {
+		opacity: 0;
+    	transition: all 500ms ease-in-out 200ms;
+	}
+
+	.site-nav li:nth-child(5) {
+		opacity: 0;
+    	transition: all 500ms ease-in-out 100ms;
+	}
+
+	.active .site-nav li:nth-child(1) {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    	transition: all 500ms ease-in-out  300ms;
+	}
+
+	.active .site-nav li:nth-child(2) {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    	transition: all 500ms ease-in-out  400ms;
+	}
+
+	.active .site-nav li:nth-child(3) {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    	transition: all 500ms ease-in-out  500ms;
+	}
+
+	.active .site-nav li:nth-child(4) {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    	transition: all 500ms ease-in-out  600ms;
+	}
+
+	.active .site-nav li:nth-child(5) {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+    	transition: all 500ms ease-in-out  700ms;
+	}
+
+	.site-nav li a p {
+		font-family: "Roboto Condensed", Arial, Sans-Serif;
+		font-size: 7vw;
+		line-height: 7vw;
+		margin-bottom: 0;
+		color: #57bfdd;
+	}
+
+	.site-nav li a {
+		border-bottom: 3px solid rgba(87,191,221,0);
+    	transition: all 300ms ease-in-out;
+	}
+
+	.site-nav li a:hover {
+		border-bottom: 3px solid rgba(87,191,221,1);
 	}

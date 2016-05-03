@@ -27,6 +27,8 @@ jQuery(document).ready(function() {
 			// _gaq.push(['_trackPageview', State.url]);	// This updates Google Analytics with a visit to the new page.
 														// If you don't use Google Analytics, you can safety comment or
 														// remove that line.
+			menuControl();
+
 		});
 	});
 
@@ -47,6 +49,7 @@ jQuery(document).ready(function() {
 			method: 'POST',
 			data: $('#myform').serialize(),
 			dataType: 'json',
+			cache: true,
 			beforeSend: function() {
 				$('.submit').before('<div class="alert alert--loading">Sending message…</div>');
 			},
@@ -59,6 +62,22 @@ jQuery(document).ready(function() {
 				$('.submit').before('<div class="alert alert--error">Ops, there was an error.</div>');
 			}
 		});
+	}
+
+	// Menu control
+	$(document).on('click', '.menu-control', function() {
+		menuControl();
+	});
+	function menuControl() {
+		var selector = $('.site-nav');
+		var isOpen = selector.parent().hasClass('active');
+		if (isOpen) {
+			selector.parent().removeClass('active');
+		}
+		else {
+			selector.parent().addClass('active');
+		}
+
 	}
 
 

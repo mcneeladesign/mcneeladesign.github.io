@@ -1,0 +1,33 @@
+---
+layout: layout
+title: Portfolio
+slug: portfolio
+permalink: /portfolio/
+---
+{% for post in site.posts %}
+{% if post.type == 'portfolio' %}
+<div class="portfolio-post animated fadeInUp">
+	<h1><a href="{{ post.url}}" title="{{ post.title }}">{{ post.title }}</a></h1>
+	{{ post.summary | markdownify }}
+	<!-- Grab the first image in the post -->
+	{% assign foundImage = 0 %}
+    {% assign images = post.content | split:"<img " %}
+    {% for image in images %}
+      {% if image contains 'src' %}
+
+          {% if foundImage == 0 %}
+              {% assign html = image | split:"/>" | first %}
+              {% assign tags = html | split:" " %}
+              {% for tag in tags %}
+                {% if tag contains 'src' %}
+                  <img {{ tag }} />
+                {% endif %}
+              {% endfor %}
+              {% assign foundImage = 1 %}
+          {% endif %}
+      {% endif %}
+    {% endfor %}
+	<p class="read-arrow"><a href="{{ post.url }}">Learn more. &rarr;</a></p>
+</div>
+{% endif %}
+{% endfor %}
